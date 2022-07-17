@@ -1,3 +1,4 @@
+# Create the grid :
 matrix_base = zeros(10, 10)
 ij_randoms = Array{Int}(undef, 0, 2)
 i = 0
@@ -18,13 +19,24 @@ end
 
 matrix_base
 
+# Plot the grid :
+using PlotlyJS
+
+data = matrix_base
+plot(
+    heatmap(
+        z=data,
+        colorscale="Greys",
+    ),
+    Layout(xaxis_showgrid=true, yaxis_showgrid=true)
+)
 
 
 
+# create the rules :
 
 
 
+# make the grid evolve with time :
 
-
-[rand(1:2,(2,1))]
 
