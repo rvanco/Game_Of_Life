@@ -1,5 +1,4 @@
-using PlotlyJS
-
+using Plots
 
 # Create the grid :
 lines = 100
@@ -30,25 +29,16 @@ matrix_base = vcat(top_border, matrix_base)
 matrix_base = hcat(matrix_base, right_border)
 matrix_base = vcat(matrix_base, bottom_border)
 
-# Plot the grid :
-show_matrix = plot(
-    heatmap(
-        z=matrix_base,
-        colorscale="Greys",
-    ),
-    Layout(xaxis_showgrid=true, yaxis_showgrid=true)
-)
+
+show_matrix = heatmap(matrix_base)
 
 path = ""
 savefig(show_matrix, path)
 
-
-steps = 0
-while steps < 100
-    using PlotlyJS
-
+anim = @animate for i in 1:100
     # Update the grid with all the rules :
     new_matrix = zeros(lines+2, columns+2)
+    global matrix_base
     for i in 2:lines
         for j in 2:columns
             neighbors = matrix_base[i-1, j-1] + matrix_base[i-1, j] + matrix_base[i-1, j+1] + matrix_base[i, j-1] + matrix_base[i, j+1] + matrix_base[i+1, j-1] + matrix_base[i+1, j] + matrix_base[i+1, j+1]
@@ -75,27 +65,9 @@ while steps < 100
             end
         end
     end
-
-    steps +=1
-
     matrix_base = copy(new_matrix)
-
-    show_matrix = plot(
-        heatmap(
-            z=matrix_base,
-            colorscale="Greys",
-        ),
-        Layout(xaxis_showgrid=true, yaxis_showgrid=true)
-    )
-
-    num = string(steps)
-    path = "" * num * ".pdf"
-    savefig(show_matrix, path)
- 
+    heatmap(matrix_base)
 end
 
-
-
-# make the grid evolve with time :
-
-
+path2 = ""
+gif(anim, path2, fps = 10)
