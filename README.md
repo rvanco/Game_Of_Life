@@ -1,8 +1,8 @@
-# Conway_Game_Of_Life (Julia implementation)
+# Game_of_Life (Julia implementation)
 
-little project to start with julia
+little project in julia
 
-_Conways’s Game Of Life is a Cellular Automation Method created by John Conway. This game was created with Biology in mind but has been applied in various fields such as Graphics, terrain generation,etc.._
+_In the folder "Conways’s Game Of Life" there is  _
 
 The “game” is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced “players”, by creating patterns with particular properties.
 
