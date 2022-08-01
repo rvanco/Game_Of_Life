@@ -1,6 +1,6 @@
 using Images, Colors
 
-map_black_white = "/Users/renaudvanco/Desktop/Julia/Map_black_white.png"
+map_black_white = "Path"
 img_continent = load(map_black_white)
 img = Gray.(img_continent)
 mat = convert(Array{Float64}, img)
