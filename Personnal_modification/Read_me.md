@@ -2,12 +2,13 @@
 
 ## Done :
 
+* Create a map with a difference between ocean and land
+
 
 ## To do :
 
 ### nowadays map :
 
-* Create a map that recreate the difference between ocean and land
 * Different species (little herbivore, big herbivore, little carnivore, big carnivore, grass, trees .... ????)
 * create a possible evolution (create the concept of anger, if the little are not angry since long ago they go to big and the inverse can be done)
 * different climate
