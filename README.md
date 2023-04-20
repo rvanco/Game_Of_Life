@@ -9,4 +9,4 @@ little project in julia
 
 ## Personal modification :
 
-In the folder "_Personnal modification_" ther is a code that I created because I wanted to go a little further and see what I can add to the "game" to make it closer to the "life" we know.
+In the folder "_Personnal modification_" (which is still in progress) there is a code that I created because I wanted to go a little further and see what I can add to the "game" to make it closer to the "life" we know.
